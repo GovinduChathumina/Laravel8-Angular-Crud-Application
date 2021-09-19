@@ -4,6 +4,7 @@
 
 [esoft-crud-app] - backend(laravel)<br>
 [esoft-crud-front] - frontend(angular)
+databasename - esoft_crud
 
 <strong>Steps to run angular front-end :</strong><br>
 1.npm install<br>
