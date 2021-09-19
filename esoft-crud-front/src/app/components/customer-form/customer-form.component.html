@@ -1,0 +1,46 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>New Customer Complaint Form</mat-card-title>
+    </mat-card-header>
+
+    <form [formGroup]="newCustomerForm" class="example-form">
+
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input id="customer_name" class="form-control" formControlName="customer_name"  matInput placeholder="Customer Name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input  id="customer_age" class="form-control" formControlName="customer_age"  matInput placeholder="Customer Age">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input  id="customer_address" class="form-control" formControlName="customer_address"  matInput placeholder="Customer Address">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input  id="problem_description" class="form-control" formControlName="problem_description"  matInput placeholder="Problem Description">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input type="date"  id="date" class="form-control" formControlName="date"  matInput placeholder="Date">
+        </mat-form-field>
+
+        <!-- <mat-form-field class="example-full-width">
+          <input  id="problem_status" class="form-control" formControlName="problem_status"  matInput placeholder="Problem Status">
+        </mat-form-field> -->
+        <mat-radio-group aria-label="Select an option" id="status" class="form-control" formControlName="problem_status">
+          <mat-radio-button value="Pending">Pending</mat-radio-button>
+          <mat-radio-button value="Resolved">Resolved</mat-radio-button>
+        </mat-radio-group>
+
+      </mat-card-content>
+
+      <button mat-stroked-button color="accent" [disabled]="!(FormControls.customer_name.valid && FormControls.customer_address.valid &&
+      FormControls.customer_age.valid && FormControls.date.valid &&
+      FormControls.problem_description.valid && FormControls.problem_status.valid)"   (click)="saveNewComplaint()" class="btn-block">Save</button>
+
+    </form>
+  </mat-card>
+</div>

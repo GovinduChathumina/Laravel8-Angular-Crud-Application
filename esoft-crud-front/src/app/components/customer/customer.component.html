@@ -1,0 +1,40 @@
+<h3 mat-dialog-title>Update Customer Complaint Details</h3>
+<div mat-dialog-content>
+  <form  [formGroup]="customerForm">
+    <mat-form-field>
+      <mat-label>Customer Name</mat-label>
+      <input matInput type="text" class="form-control" id="customer_name" formControlName="customer_name"  [(ngModel)]="data.customer_name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Customer Address</mat-label>
+      <input matInput type="text" class="form-control" id="customer_address" placeholder="Customer Address" formControlName="customer_address" [(ngModel)]="data.customer_address">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Customer Age</mat-label>
+      <input matInput type="text" class="form-control" id="customer_age" placeholder="Customer Age" formControlName="customer_age" [(ngModel)]="data.customer_age">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input matInput type="date" class="form-control" id="date" placeholder="Date" formControlName="date" [(ngModel)]="data.date">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Problem Description</mat-label>
+      <input matInput type="text" class="form-control" id="problem_description" placeholder="Problem Description" formControlName="problem_description" [(ngModel)]="data.problem_description">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Problem Status</mat-label>
+      <input matInput type="text" class="form-control" id="problem_status" placeholder="Problem Status" formControlName="problem_status" [(ngModel)]="data.problem_status">
+    </mat-form-field>
+
+    <div class="modal-body">
+      <div class="modal-footer">
+        <button mat-flat-button color="primary"(click)="updateCustomerDetails()">Update</button>
+      </div>
+    </div>
+  </form>
+</div>
