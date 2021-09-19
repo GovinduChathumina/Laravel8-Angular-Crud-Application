@@ -3,7 +3,7 @@
 <strong>Designing and Implementing a crud app Using Laravel 8(Auth:Passport)+Angular</strong><br>
 
 [esoft-crud-app] - backend(laravel)<br>
-[esoft-crud-front] - frontend(angular)
+[esoft-crud-front] - frontend(angular)<br>
 databasename - esoft_crud
 
 <strong>Steps to run angular front-end :</strong><br>
